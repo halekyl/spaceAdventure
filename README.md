@@ -1,16 +1,21 @@
-# dart_space_adventure
+# spaceAdventure
+Dart command-line program that takes in a path to a JSON file as the command-line argument. The program prints the output and supports interaction with the user via the command-line. 
 
-A new Flutter project.
+In the flutter sdk file run `export PATH="$PATH:`pwd`/flutter/bin"`\
+To start the program: `dart bin/main.dart bin/planetarySystem.json`
 
-## Getting Started
+## Does the following:
 
-This project is a starting point for a Flutter application.
+- Prints a greeting including the name of the planetary system (JSON) and the number of planets in the system.
+- Prompts the user for thier name. 
+- Echoes back the user's name.
+- Prompts the user to make a choice about traveling to a random planet or not.
+- Re-prompts the user repeatedly until they enter Y or N.
+#### If Y: (user chooses to travel to a random planet)
+- Selects a random planet and print its name and description.
+#### If N: (user chooses not to travel to a random planet)
+- Prompts the user to enter the name of a planet they want to travel to.
+- Displays the name and description of the planet that the user specified.
+- Validation is implemented to handle the case where the user enters the name of a planet that is not in the JSON data file.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+At the end of the interaction the program terminates.
